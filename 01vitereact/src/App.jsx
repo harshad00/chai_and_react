@@ -1,13 +1,15 @@
- 
- 
- 
- 
+import Chai from "./chai" 
+
 
 function App() {
-  
+  const username = "chai aur code"
 
-  return (
-     <h1>Chai aur react with vite | ID</h1>
+  return ( 
+    <>
+      <Chai />
+      <h1>chai aur react {username}</h1>
+      <p>hello</p> 
+    </>
   )
 }
 
