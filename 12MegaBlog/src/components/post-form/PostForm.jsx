@@ -17,10 +17,9 @@ function PostForm({ post }) {
     });
 
   const navigate = useNavigate();
-  const userData = useSelector((state) => state.user.userData);
+  const userData = useSelector((state) => state.auth.userData);
 
-  const submit = async (data) => {
-    M;
+  const submit = async (data) => { 
     if (post) {
       const file = data.image[0]
         ? appwriteService.uploadFile(data.image[0])
@@ -113,6 +112,7 @@ function PostForm({ post }) {
         <Input
           label="Featured Image :"
           placeholder="file"
+          type="file"
           className="mb-4"
           accept="image/png, image/jpg, image/jpeg, image/gif"
           {...register("image", { required: !post })}
@@ -128,7 +128,7 @@ function PostForm({ post }) {
         )}
         <Select
             options={["active", "inactive"]}
-            label="Status"
+            label="Status :"
             className="mb-4"
             {...register("status", {required: true})}
         />
