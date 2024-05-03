@@ -136,7 +136,7 @@ export class Service {
         conf.appwriteBucketId,
         fileId
     )
-  }
+}
 //   async getFilePreview(fileId){
 //     try {
 //         return await this.bucket.getFilePreview(

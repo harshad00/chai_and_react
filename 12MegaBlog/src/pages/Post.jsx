@@ -36,11 +36,18 @@ export default function Post() {
         <div className="py-8">
             <Container>
                 <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
+
+                    {/* {console.log("Befor : ", appwriteService.getFilePreview(post.featuredImage)) } */}
+
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
+                        // src= '../../image.jpg'
+                        // src="https://th.bing.com/th/id/OIP.1d6tBbNiJTFQNEK_k0sSjQHaFj?rs=1&pid=ImgDetMain"
                         alt={post.title}
                         className="rounded-xl"
                     />
+
+                    {/* {console.log("After : ", appwriteService.getFilePreview(post.featuredImage)) } */}
 
                     {isAuthor && (
                         <div className="absolute right-6 top-6">
