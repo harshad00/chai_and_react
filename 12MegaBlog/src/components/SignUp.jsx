@@ -76,7 +76,7 @@ function SignUp() {
                     {...register("password", {
                         required: true,
                     })}
-                    />
+                    /> 
                     <Button
                     type="submit"
                     className="w-full"
